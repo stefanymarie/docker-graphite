@@ -55,4 +55,4 @@ EXPOSE 8125/udp
 EXPOSE 8126
 
 VOLUME ["/var/lib/graphite/storage/whisper"]
-ENTRYPOINT ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisord"]
