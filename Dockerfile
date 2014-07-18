@@ -7,7 +7,7 @@ RUN echo 'deb http://us.archive.ubuntu.com/ubuntu/ trusty universe' >> /etc/apt/
 RUN apt-get -y update
 
 # Install required packages
-RUN apt-get -y install python-software-properties python-ldap python-cairo python-django python-django-tagging python-simplejson python-memcache python-pysqlite2 python-support python-pip gunicorn supervisor nginx-light memcache
+RUN apt-get -y install python-software-properties python-ldap python-cairo python-django python-django-tagging python-simplejson python-memcache python-pysqlite2 python-support python-pip gunicorn supervisor nginx-light memcached
 RUN pip install whisper 'twisted<12.0'
 RUN pip install --install-option="--prefix=/var/lib/graphite" --install-option="--install-lib=/var/lib/graphite/lib" carbon
 RUN pip install --install-option="--prefix=/var/lib/graphite" --install-option="--install-lib=/var/lib/graphite/webapp" graphite-web
