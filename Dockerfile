@@ -1,9 +1,9 @@
-FROM ubuntu:12.04
+FROM ubuntu:trusty
 MAINTAINER acaleph "admin@acale.ph"
 # Thanks to Nick Stenning for the original graphite docker work
 
 
-RUN echo 'deb http://us.archive.ubuntu.com/ubuntu/ precise universe' >> /etc/apt/sources.list
+RUN echo 'deb http://us.archive.ubuntu.com/ubuntu/ trusty universe' >> /etc/apt/sources.list
 RUN apt-get -y update
 
 # Install required packages
