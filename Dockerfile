@@ -13,12 +13,12 @@ RUN pip install --install-option="--prefix=/var/lib/graphite" --install-option="
 RUN pip install --install-option="--prefix=/var/lib/graphite" --install-option="--install-lib=/var/lib/graphite/webapp" graphite-web
 
 # Install statsd
-RUN add-apt-repository ppa:chris-lea/node.js
-RUN apt-get -y update
-RUN apt-get -y install nodejs git
-RUN mkdir /src
-RUN git clone https://github.com/etsy/statsd.git /src/statsd
-ADD ./config.js /src/statsd/config.js
+# RUN add-apt-repository ppa:chris-lea/node.js
+# RUN apt-get -y update
+# RUN apt-get -y install nodejs git
+# RUN mkdir /src
+# RUN git clone https://github.com/etsy/statsd.git /src/statsd
+# ADD ./config.js /src/statsd/config.js
 
 
 
