@@ -7,7 +7,7 @@ RUN apt-get -y update
 
 # Install required packages
 RUN apt-get -y install software-properties-common python-ldap python-cairo python-simplejson python-memcache python-pysqlite2 python-support python-pip python-dev gunicorn supervisor nginx-light memcached
-RUN pip install whisper 'twisted<12.0' 'django<1.6.0' django-tagging
+RUN pip install whisper 'twisted<12.0' 'django<1.5.3' django-tagging
 RUN pip install --install-option="--prefix=/var/lib/graphite" --install-option="--install-lib=/var/lib/graphite/lib" carbon
 RUN pip install --install-option="--prefix=/var/lib/graphite" --install-option="--install-lib=/var/lib/graphite/webapp" graphite-web
 
