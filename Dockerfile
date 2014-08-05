@@ -39,6 +39,9 @@ RUN chmod 0775 /var/lib/graphite/storage /var/lib/graphite/storage/whisper
 RUN chmod 0664 /var/lib/graphite/storage/graphite.db
 RUN cd /var/lib/graphite/webapp/graphite && python manage.py syncdb --noinput
 
+ADD ./run.sh /var/lib/graphite/run.sh
+RUN chmod 777 /var/lib/graphite/run.sh
+
 # Nginx
 EXPOSE 80
 # Carbon line receiver port
@@ -54,4 +57,4 @@ EXPOSE 8125/udp
 EXPOSE 8126
 
 VOLUME ["/var/lib/graphite/storage/whisper"]
-ENTRYPOINT ["/usr/bin/supervisord"]
+ENTRYPOINT ["/var/lib/graphite/run.sh"]
